@@ -14,5 +14,5 @@ variables:
 
 steps:
 - script: |
-    docker-compose -f docker-compose.yml up
+    docker-compose -f docker-compose.yml up -d
       displayName: 'docker build'
