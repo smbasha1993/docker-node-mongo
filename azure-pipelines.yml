@@ -10,8 +10,9 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  imageName: 'your-container-image-name:$(build.buildId)'
+  imageName: 'Test:$(build.buildId)'
   dockerId: mansoor4win
+  pswd: Smb@12345
 
 steps:
 - script: |
@@ -23,5 +24,3 @@ steps:
     docker build -t $(dockerId)/$(imageName) .
     docker push $(dockerId)/$(imageName)
 
-  env:
-    pswd: Smb@12345
