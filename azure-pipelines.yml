@@ -15,7 +15,7 @@ variables:
 
 steps:
 - script: |
-    docker build -t $(dockerId).azurecr.io/$(imageName) .
-    docker login -u mansoor4win -p Smb@12345 $(dockerId).azurecr.io
-    docker push $(dockerId).azurecr.io/$(imageName)
-
+- script: |
+    docker-compose -f docker-compose.yml --project-directory . -p docs up -d
+    docker wait docs_sut_1
+    docker-compose -f docker-compose.yml --project-directory . down
