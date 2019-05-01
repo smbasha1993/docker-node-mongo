@@ -10,7 +10,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  imageName: 'Test:$(build.buildId)'
+  imageName: 'test:$(build.buildId)'
   dockerId: mansoor4win
   pswd: Smb@12345
 
