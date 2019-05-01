@@ -20,7 +20,4 @@ steps:
     docker login -u $(dockerId) --password-stdin $(pswd) $(dockerId)
     docker push $(dockerId)/$(imageName)
 
-- script: |
-    docker build -t $(dockerId)/$(imageName) .
-    docker push $(dockerId)/$(imageName)
 
